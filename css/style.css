@@ -1,0 +1,37 @@
+/* ——————‡—————— Global Styles ——————‡—————— */
+:root {
+  --clr-white: #fff;
+  --clr-black: #000;
+  --clr-green: #82be82;
+  --clr-purple: #882b88;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Bebas Neue', cursive;
+  background-color: var(--clr-black);
+  color: var(--clr-white);
+}
+
+/* ——————‡—————— Local Styles ——————‡—————— */
+.container {
+  position: relative;
+  height: 35rem;
+  width: 40rem;
+  background-color: var(--clr-green);
+  margin: 3rem auto;
+  text-align: center;
+  line-height: 28rem;
+}
+.box {
+  position: absolute;
+  background-color: var(--clr-purple);
+  width: 47rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
