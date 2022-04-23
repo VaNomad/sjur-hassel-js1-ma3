@@ -4,11 +4,14 @@ const resultBox = document.querySelector(".box");
 
 async function apiCall() {
   try {
-    const response = await fetch(url);
+    for (i = 0; i < result.length; i++) {
+      const response = await fetch(url);
 
-    const result = await response.json();
+      const result = await response.json();
 
-    console.log(result);
+      console.log(result);
+    }
+    
     
   } catch (error) {
     console.log(error);
