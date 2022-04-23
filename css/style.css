@@ -17,6 +17,28 @@ body {
 }
 
 /* ——————‡—————— Local Styles ——————‡—————— */
+.loader {
+  
+  border: 20px solid var(--clr-green);
+  border-top: 20px solid var(--clr-white);
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  animation: spin .5s linear infinite;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .container {
   position: relative;
   height: 35rem;
@@ -24,14 +46,19 @@ body {
   background-color: var(--clr-green);
   margin: 3rem auto;
   text-align: center;
-  line-height: 28rem;
 }
-.box {
+.smallBox {
   position: absolute;
   background-color: var(--clr-purple);
   width: 47rem;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+.listBox {
+  display: flex;
+  background-color: orange;
+  width: 20rem;
+  color: var(--clr-black);
 }
 
