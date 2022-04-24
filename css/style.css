@@ -37,8 +37,6 @@ p {
   
 }
 .box {
-
-  /* position: relative; */
   max-width: 40rem;
   max-height: 30rem;
   display: flex;

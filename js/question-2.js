@@ -13,9 +13,7 @@ async function apiCall() {
 
     console.log(data);
     
-    // setTimeout(() => {
-      resultBox.innerHTML = "";
-    // }, 2000)
+    resultBox.innerHTML = "";
 
     for (i = 0; i < data.length; i++) { 
       console.log(data[i]);
@@ -34,7 +32,9 @@ async function apiCall() {
     
   } catch (error) {
     console.log(error);
-    resultBox.innerHTML = error
+    resultBox.innerHTML = `
+    <h1 style="font-size: 3rem; color: var(--clr-pink)">Oh no!</h1>
+    <h2 style="font-size: 2rem">something didn't quite go as planned!</h2>`;
   }
 }
 
