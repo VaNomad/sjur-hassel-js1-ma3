@@ -34,7 +34,6 @@ p {
   background: linear-gradient(360deg, rgba(187, 101, 76,1) 0%, rgba(24, 55,168,1) 100%);
   height: 100vh;
   overflow: scroll;
-  
 }
 .box {
   max-width: 40rem;
