@@ -1,28 +1,33 @@
 const url = "https://api.rawg.io/api/games?dates=2019-01-01,2019-12-31&ordering=-rating&key=f4d4f1371ed24753bc791b5cc4855b48"
 
-const resultBox = document.querySelector(".listBox");
+const resultBox = document.querySelector(".box");
 
 async function apiCall() {
   try {
     
     const response = await fetch(url);
 
-    const results = await response.json();
+    const result = await response.json();
 
-    const object = results;
-
-    console.log(results.results);
+    console.log(result);
     
-    resultBox.innerHTML = "";
+    setTimeout(() => {
+      resultBox.innerHTML = "";
+    }, 2000)
 
-    for (i = 0; i < object.length; i++) { 
-      console.log(object[i]);
+    for (i = 0; i < result.length; i++) { 
+      console.log(result[i].object);
 
       if (i === 8) {
         break;
       }
       
-      resultBox.innerHTML += `<div class="result">${object[i].name} + ${object[i].rating} + ${object[i].tag.length}</div>`;
+      resultBox.innerHTML += `
+      <div class="result">
+      <h2>Name: ${result[i].name}</h2>
+      <p>Rating: ${result[i].rating}</p>
+      <p>Tags: ${result[i].tags.length}</p>
+      </div>`;      
     }
     
   } catch (error) {
