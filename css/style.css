@@ -34,8 +34,8 @@ p {
 .box {
   position: absolute;
   /* background-color: var(--clr-green); */
-  height: 35rem;
-  max-width: 70rem;
+  height: 15rem;
+  /* max-width: 50rem; */
   color: var(--clr-black);
   margin: auto;
   top: 50%;
@@ -64,7 +64,7 @@ p {
   color: var(--clr-pink);
   letter-spacing: .2rem;
   border-radius: 1.5rem;
-  max-width: 70rem;
+  min-width: 45rem;
   margin: 1rem;
   padding: 1rem;
   border: 3px dotted var(--clr-yellow);
