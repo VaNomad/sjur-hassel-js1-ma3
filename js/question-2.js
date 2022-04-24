@@ -25,7 +25,7 @@ async function apiCall() {
       }
       
       resultBox.innerHTML += `
-      <div class="games">
+      <div class="games" style="background-attachment: scroll">
       <h2>Name: ${data[i].name}</h2>
       <p>Rating: ${data[i].rating}</p>
       <p>Tags: ${data[i].tags.length}</p>
