@@ -9,24 +9,26 @@ async function apiCall() {
 
     const result = await response.json();
 
-    console.log(result);
-    
-    setTimeout(() => {
-      resultBox.innerHTML = "";
-    }, 2000)
+    const data = result.results;
 
-    for (i = 0; i < result.length; i++) { 
-      console.log(result[i].object);
+    console.log(data);
+    
+    // setTimeout(() => {
+      resultBox.innerHTML = "";
+    // }, 2000)
+
+    for (i = 0; i < data.length; i++) { 
+      console.log(data[i]);
 
       if (i === 8) {
         break;
       }
       
       resultBox.innerHTML += `
-      <div class="result">
-      <h2>Name: ${result[i].name}</h2>
-      <p>Rating: ${result[i].rating}</p>
-      <p>Tags: ${result[i].tags.length}</p>
+      <div class="games">
+      <h2>Name: ${data[i].name}</h2>
+      <p>Rating: ${data[i].rating}</p>
+      <p>Tags: ${data[i].tags.length}</p>
       </div>`;      
     }
     
